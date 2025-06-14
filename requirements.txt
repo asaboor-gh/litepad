@@ -7,4 +7,4 @@ jupyterlab-night
 jupyterlite-pyodide-kernel
 plotly>=6,<7
 
-einteract
+einteract>=1.3.1
