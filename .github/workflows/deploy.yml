@@ -25,6 +25,10 @@ jobs:
         run: |
           cp README.md content
           jupyter lite build --contents content --output-dir dist
+      - name: Convert notebooks to HTML
+        run: |
+          mkdir -p dist/docs
+          jupyter nbconvert content/*.ipynb --to html --output-dir dist/docs
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
