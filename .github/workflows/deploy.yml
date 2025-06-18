@@ -24,7 +24,7 @@ jobs:
       - name: Convert notebooks to HTML
         run: |
           mkdir -p _docs
-          jupyter nbconvert content/*.ipynb --to html --output-dir _docs
+          jupyter nbconvert content/*.ipynb --to md --output-dir _docs
       - name: Build the JupyterLite site
         run: |
           cp README.md content
