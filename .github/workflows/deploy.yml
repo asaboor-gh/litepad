@@ -29,7 +29,7 @@ jobs:
         run: |
           cp README.md content
           mv _docs content/docs
-          jupyter lite build --contents content --output-dir dist
+          jupyter lite build --contents content --output-dir dist/lite
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
