@@ -28,12 +28,12 @@ jobs:
       - name: Build the JupyterLite site
         run: |
           cp README.md content
-          mv _docs content/docs
-          jupyter lite build --contents content --output-dir dist/lite
+          cp -r _docs content/docs
+          jupyter lite build --contents content --output-dir dist
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist
+          path: .
 
   deploy:
     needs: build
